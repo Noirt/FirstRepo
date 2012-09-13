@@ -6,3 +6,5 @@ Hello!
 13.09.2012
 St. Petersburg
 1234567
+
+BAD guy!
