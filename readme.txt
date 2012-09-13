@@ -5,7 +5,7 @@ Welcome to GIT world!=)
 Hello!
 13.09.2012
 St. Petersburg
-1234567
+123-4568
 
 Welcome to the Universe!
 olololo
