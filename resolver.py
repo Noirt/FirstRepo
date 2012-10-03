@@ -1,6 +1,6 @@
 def add():
 	d = {}
-	f = open('/home/max/Study/Web/work/resolver', 'r')
+	f = open('resolver', 'r')
 	stmp = f.read()
 	f.close()
 	lst = stmp.split("\n")
@@ -18,7 +18,7 @@ def add():
 		while True:
 			sn = raw_input("<ip> <host>: ")
 			if re.match('([0-9]{1,3}\.){3}([0-9]{1,3}\ ){1}[a-z0-9]+', sn) is not None:
-				f = open('/home/max/Study/Web/work/resolver', 'w')
+				f = open('resolver', 'w')
 				for c in d:
 					f.write(c+" "+d[c]+'\n')
 				f.write(sn)
@@ -30,7 +30,7 @@ def add():
 				
 def f_ip():
 	d = {}
-	f = open('/home/max/Study/Web/work/resolver', 'r')
+	f = open('resolver', 'r')
 	stmp = f.read()
 	f.close()
 	lst = stmp.split("\n")
@@ -56,7 +56,7 @@ def f_ip():
 			
 def f_host():
 	d = {}
-	f = open('/home/max/Study/Web/work/resolver', 'r')
+	f = open('resolver', 'r')
 	stmp = f.read()
 	f.close()
 	lst = stmp.split("\n")
