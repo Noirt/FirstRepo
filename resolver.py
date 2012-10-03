@@ -1,8 +1,4 @@
-Python 2.7.3 (default, Aug  1 2012, 05:14:39) 
-[GCC 4.6.3] on linux2
-Type "copyright", "credits" or "license()" for more information.
-==== No Subprocess ====
->>> def add():
+def add():
 	d = {}
 	f = open('/home/max/Study/Web/work/resolver', 'r')
 	stmp = f.read()
@@ -32,7 +28,7 @@ Type "copyright", "credits" or "license()" for more information.
 				print("Wrong format. Try again.")
 
 				
->>> def f_ip():
+def f_ip():
 	d = {}
 	f = open('/home/max/Study/Web/work/resolver', 'r')
 	stmp = f.read()
@@ -58,9 +54,7 @@ Type "copyright", "credits" or "license()" for more information.
 			print("Wrong format. Try again.")
 
 			
->>> 
->>> 
->>> def f_host():
+def f_host():
 	d = {}
 	f = open('/home/max/Study/Web/work/resolver', 'r')
 	stmp = f.read()
@@ -86,7 +80,8 @@ Type "copyright", "credits" or "license()" for more information.
 			print("Wrong format. Try again.")
 
 			
->>> def main():
+def main():
+	add()
 	while True:
 		s = raw_input("Enter command: ")
 		if s == "add":
@@ -97,49 +92,11 @@ Type "copyright", "credits" or "license()" for more information.
 			f_ip()
 		elif s == 'quit':
 			break;
+		elif s == 'help':
+			print('Command list:\nadd\nfind host\nfind ip\nquit\nhelp')
 		else:
 			print("Unknown command.")
 
 			
->>> main()
-Enter command: add
-ip host list:
-192.168.2.4 hostunknown
-1.1.1.1 first
-127.0.0.1 local
-77.88.2.4 y
-Add new(y/n): y
-<ip> <host>: 13.24.35 yr
-Wrong format. Try again.
-<ip> <host>: 13.24.35.46 yr
-Enter command: add
-ip host list:
-192.168.2.4 hostunknown
-1.1.1.1 first
-127.0.0.1 local
-77.88.2.4 y
-13.24.35.46 yr
-Add new(y/n): n
-Enter command: find ip
-Enter ip: 1.1.1.1
-1.1.1.1 first
-Enter command: find ip
-Enter ip: 2.2.2.2
-No such ip.
-Enter command: find ip
-Enter ip: a.s.d.f
-Wrong format. Try again.
-Enter ip: 1.1.1
-Wrong format. Try again.
-Enter ip: 1.1.1.1
-1.1.1.1 first
-Enter command: find host
-Enter host: Y
-Wrong format. Try again.
-Enter host: y
-y 77.88.2.4
-Enter command: find host
-Enter host: yr1
-No such host.
-Enter command: quit
->>> 
+main()
+

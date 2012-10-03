@@ -1,11 +1,4 @@
-Python 2.7.3 (default, Aug  1 2012, 05:14:39) 
-[GCC 4.6.3] on linux2
-Type "copyright", "credits" or "license()" for more information.
-==== No Subprocess ====
->>> 
->>> 
->>> 
->>> def SymGen():
+def SymGen():
 	d = {"1" : [['','','','*','*','','',''],
 		['','','*','*','*','','',''],
 		['','','*','*','*','','',''],
@@ -87,56 +80,18 @@ Type "copyright", "credits" or "license()" for more information.
 		['','*','','','','','*',''],
 		['','*','*','*','*','*','*','']]}
 	n = raw_input('Enter digit: ')
-	for c in d[n]:
-		s = ''
-		for b in c:
-			if b == '':
-				s += ' '
-			else:
-				s += b
-		print(s)
-
+	import re
+	if re.match('^[0-9]{1}$', n) is not None:
+		for c in d[n]:
+			s = ''
+			for b in c:
+				if b == '':
+					s += ' '
+				else:
+					s += b
+			print(s)
+	else:
+		print("Error. Enter only one digit.")
 		
->>> 
->>> 
->>> SymGen()
-Enter digit: 4
-  *  *  
-  *  *  
-  *  *  
-  *  *  
-  ****  
-     *  
-     *  
-     *  
->>> SymGen()
-Enter digit: 7
- ****** 
-      * 
-     *  
-    *   
-    *   
-    *   
-    *   
-    *   
->>> SymGen()
-Enter digit: 2
-   ***  
-  *   * 
- *    * 
-      * 
-     *  
-   **   
-  *     
- ****** 
->>> SymGen()
-Enter digit: 3
-  ****  
- *    * 
-      * 
-    **  
-     *  
-      * 
- *    * 
-  ****  
->>> 
+SymGen()
+
